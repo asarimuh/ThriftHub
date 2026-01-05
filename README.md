@@ -1,7 +1,7 @@
 # ThriftHub
 
 ThriftHub is a Clothing thrift marketplace web application built
-as a **personal learning project** using **Laravel 12**.\
+as a **personal learning project** using **Laravel 12**.
 The platform simulates a marketplace where users can **buy and sell new
 or used clothing items**, inspired by real-world online thrift shops.
 
@@ -15,39 +15,39 @@ or used clothing items**, inspired by real-world online thrift shops.
 
 ### User
 
--   User registration & authentication\
--   Profile management\
--   List clothing items for sale\
--   Browse and search products\
--   Purchase products\
+-   User registration & authentication
+-   Profile management
+-   List clothing items for sale
+-   Browse and search products
+-   Purchase products
 -   Order history
 
 ### Product
 
--   Create, update, delete product listings\
--   Upload multiple product images\
--   Product categories & conditions (new / used)\
+-   Create, update, delete product listings
+-   Upload multiple product images
+-   Product categories & conditions (new / used)
 -   Stock & availability management
 
 ### Transaction
 
--   Checkout flow (non-payment / mock payment)\
--   Order status tracking\
+-   Checkout flow (non-payment / mock payment)
+-   Order status tracking
 -   Seller & buyer role separation
 
 ### Admin 
 
--   Manage users\
--   Moderate product listings\
+-   Manage users
+-   Moderate product listings
 -   View transaction reports
 
 ------------------------------------------------------------------------
 
 ## 🧱 Tech Stack
 
--   **Backend**: Laravel 12\
--   **Database**: MySQL\
--   **Frontend**: Blade + Tailwind CSS\
+-   **Backend**: Laravel 12
+-   **Database**: MySQL
+-   **Frontend**: Blade + Tailwind CSS
 
 ------------------------------------------------------------------------
 
@@ -72,17 +72,17 @@ or used clothing items**, inspired by real-world online thrift shops.
 
 ## 🧪 Future Improvements
 
--   Payment gateway integration (Midtrans / Stripe)\
--   Product review & rating system\
--   Chat between buyer & seller\
--   Wishlist feature\
+-   Payment gateway integration (Midtrans / Stripe)
+-   Product review & rating system
+-   Chat between buyer & seller
+-   Wishlist feature
 -   API version (Laravel API + SPA frontend)
 
 ------------------------------------------------------------------------
 
 ## 👨‍💻 Author
 
-Built by **Ari**\
+Built by **Ari**
 
 ------------------------------------------------------------------------
 
