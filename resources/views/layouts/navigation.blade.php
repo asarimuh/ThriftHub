@@ -6,11 +6,11 @@
             <div class="flex items-center gap-8">
                 <!-- Brand -->
                 <a href="{{ route('home') }}" class="flex items-center gap-2">
-                    <div class="flex h-8 w-8 items-center justify-center rounded-lg bg-indigo-600 text-white text-sm font-semibold">
-                        PL
+                    <div class="flex h-8 w-8 items-center justify-center">
+                        <img src="{{ asset('images/brand/brand-logo.svg') }}" alt="" srcset="">
                     </div>
                     <span class="font-semibold text-gray-900">
-                        PakaiLagi
+                        ThriftHub
                     </span>
                 </a>
 

@@ -1,110 +1,241 @@
 <x-app-layout>
 
-    <!-- HERO -->
+     <!-- COMPACT HERO -->
     <section class="relative bg-gradient-to-br from-indigo-600 via-indigo-700 to-indigo-900 text-white overflow-hidden">
-        <!-- Background Pattern -->
-        <div class="absolute inset-0 opacity-10">
-            <div class="absolute top-10 left-10 w-64 h-64 rounded-full bg-indigo-400 blur-3xl"></div>
-            <div class="absolute bottom-10 right-10 w-80 h-80 rounded-full bg-indigo-300 blur-3xl"></div>
-        </div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid grid-cols-1 lg:grid-cols-3 items-center gap-8">
 
-        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-            <div class="text-center lg:text-left">
-                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight">
-                    Baju lama,
-                    <span class="block text-indigo-200 mt-2">cerita baru.</span>
-                </h1>
-
-                <p class="mt-6 text-lg text-indigo-100 max-w-lg mx-auto lg:mx-0">
-                    PakaiLagi adalah marketplace preloved untuk jual beli fashion yang masih layak pakai. Hemat, berkelanjutan, dan penuh cerita.
-                </p>
-
-                <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                    <a href="#products"
-                       class="inline-flex items-center justify-center rounded-full bg-white px-8 py-4 text-base font-semibold text-indigo-700 hover:bg-indigo-50 hover:scale-105 active:scale-95 transition-all duration-200 shadow-lg">
-                        Jelajahi Produk
-                        <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
-                        </svg>
-                    </a>
-
-                    @auth
-                        @if(auth()->user()->isBuyer())
-                            <form method="POST" action="{{ route('seller.upgrade') }}" class="inline-flex">
-                                @csrf
-                                <button type="submit"
-                                    class="inline-flex items-center justify-center rounded-full border-2 border-white/40 px-8 py-4 text-base font-medium hover:bg-white/10 hover:border-white/60 transition-all duration-200 backdrop-blur-sm">
-                                    Mulai Jual
-                                    <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
-                                    </svg>
-                                </button>
-                            </form>
-                        @endif
-                    @else
-                        <a href="{{ route('register') }}"
-                           class="inline-flex items-center justify-center rounded-full border-2 border-white/40 px-8 py-4 text-base font-medium hover:bg-white/10 hover:border-white/60 transition-all duration-200 backdrop-blur-sm">
-                            Daftar Gratis
-                            <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"/>
-                            </svg>
-                        </a>
-                    @endauth
+                <!-- LEFT CARD STACK -->
+                <div class="hidden lg:flex justify-center">
+                    @include('home.partials.hero-card-left')
                 </div>
 
-                <!-- Stats -->
-                <div class="mt-12 grid grid-cols-3 gap-6 max-w-md mx-auto lg:mx-0">
-                    <div class="text-center">
-                        <div class="text-2xl font-bold">500+</div>
-                        <div class="text-sm text-indigo-200 mt-1">Produk Terjual</div>
+                {{-- Mid text --}}
+                <div class="text-center max-w-3xl mx-auto">
+                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight tracking-tight">
+                        Baju lama,
+                        <span class="block text-indigo-200 mt-1">cerita baru.</span>
+                    </h1>
+
+                    <p class="mt-4 text-indigo-100 max-w-xl mx-auto">
+                        Marketplace preloved fashion berkualitas dengan harga terjangkau.
+                    </p>
+
+                    <div class="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
+                        <a href="#products"
+                        class="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-semibold text-indigo-700 hover:bg-indigo-50 hover:scale-105 active:scale-95 transition-all duration-200 shadow-lg">
+                            Jelajahi Produk
+                        </a>
+
+                        @auth
+                            @if(auth()->user()->isBuyer())
+                                <form method="POST" action="#">
+                                    @csrf
+                                    <button type="submit"
+                                        class="inline-flex items-center justify-center rounded-full border border-white/40 px-6 py-3 text-sm font-medium hover:bg-white/10 hover:border-white/60 transition-all duration-200 backdrop-blur-sm">
+                                        Mulai Jual
+                                    </button>
+                                </form>
+                            @endif
+                        @else
+                            <a href="#"
+                            class="inline-flex items-center justify-center rounded-full border border-white/40 px-6 py-3 text-sm font-medium hover:bg-white/10 hover:border-white/60 transition-all duration-200 backdrop-blur-sm">
+                                Daftar Gratis
+                            </a>
+                        @endauth
                     </div>
-                    <div class="text-center">
-                        <div class="text-2xl font-bold">200+</div>
-                        <div class="text-sm text-indigo-200 mt-1">Seller Aktif</div>
+                </div>
+
+                <!-- RIGHT CARD STACK -->
+                <div class="hidden lg:flex justify-center">
+                    @include('home.partials.hero-card-right')
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUCTS SECTION WITH FILTERS -->
+    <section id="products" class="bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <!-- Section Header with Search & Filter -->
+            <div class="mb-6">
+                <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-4">
+                    <div>
+                        <h2 class="text-2xl font-bold text-gray-900">
+                            Produk Terbaru
+                        </h2>
+                        <p class="text-sm text-gray-600 mt-1">
+                            Temukan fashion preloved yang sesuai dengan gaya Anda
+                        </p>
                     </div>
-                    <div class="text-center">
-                        <div class="text-2xl font-bold">4.8★</div>
-                        <div class="text-sm text-indigo-200 mt-1">Rating</div>
+
+                    <!-- Search Bar -->
+                    <div class="w-full lg:w-auto">
+                        <div class="relative">
+                            <input 
+                                type="text" 
+                                placeholder="Cari produk, brand, atau kata kunci..."
+                                class="w-full lg:w-80 pl-10 pr-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 focus:outline-none transition"
+                            >
+                            <div class="absolute left-3 top-1/2 transform -translate-y-1/2">
+                                <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Filter Controls -->
+                <div class="mt-6 flex flex-wrap items-center gap-3">
+                    <!-- Sort Dropdown -->
+                    <div class="relative">
+                        <select class="appearance-none bg-white border border-gray-300 rounded-lg px-4 py-2.5 pr-10 text-sm focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 focus:outline-none cursor-pointer">
+                            <option>Urutkan: Terbaru</option>
+                            <option>Harga: Rendah ke Tinggi</option>
+                            <option>Harga: Tinggi ke Rendah</option>
+                            <option>Rating Tertinggi</option>
+                            <option>Terlaris</option>
+                        </select>
+                        <div class="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none">
+                            <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- Category Filter -->
+                    <div class="relative">
+                        <select class="appearance-none bg-white border border-gray-300 rounded-lg px-4 py-2.5 pr-10 text-sm focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 focus:outline-none cursor-pointer">
+                            <option>Semua Kategori</option>
+                            <option>Pakaian</option>
+                            <option>Sepatu</option>
+                            <option>Aksesoris</option>
+                            <option>Tas</option>
+                            <option>Perlengkapan</option>
+                        </select>
+                    </div>
+
+                    <!-- Condition Filter -->
+                    <div class="relative">
+                        <select class="appearance-none bg-white border border-gray-300 rounded-lg px-4 py-2.5 pr-10 text-sm focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 focus:outline-none cursor-pointer">
+                            <option>Semua Kondisi</option>
+                            <option>Baru</option>
+                            <option>Seperti Baru</option>
+                            <option>Bekas (Baik)</option>
+                            <option>Bekas (Cukup)</option>
+                        </select>
+                    </div>
+
+                    <!-- Price Range -->
+                    <div class="relative">
+                        <select class="appearance-none bg-white border border-gray-300 rounded-lg px-4 py-2.5 pr-10 text-sm focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 focus:outline-none cursor-pointer">
+                            <option>Semua Harga</option>
+                            <option>Di bawah Rp 100.000</option>
+                            <option>Rp 100.000 - Rp 300.000</option>
+                            <option>Rp 300.000 - Rp 500.000</option>
+                            <option>Di atas Rp 500.000</option>
+                        </select>
+                    </div>
+
+                    <!-- Clear Filters Button -->
+                    <button class="px-4 py-2.5 text-sm text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition">
+                        Hapus Filter
+                    </button>
+
+                    <!-- View Toggle -->
+                    <div class="flex border border-gray-300 rounded-lg overflow-hidden ml-auto">
+                        <button class="px-3 py-2 bg-white text-gray-700 hover:bg-gray-50 border-r border-gray-300">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
+                            </svg>
+                        </button>
+                        <button class="px-3 py-2 bg-gray-100 text-gray-900">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                            </svg>
+                        </button>
                     </div>
                 </div>
             </div>
 
-            <!-- Hero Visual -->
-            <div class="relative mt-12 lg:mt-0">
-                <div class="relative mx-auto max-w-md">
-                    <!-- Main Card -->
-                    <div class="relative rounded-3xl bg-white/10 backdrop-blur-xl border border-white/20 p-8 shadow-2xl">
-                        <!-- Product Images Stack -->
-                        <div class="relative h-80">
-                            <div class="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent rounded-2xl"></div>
-                            
-                            <!-- Product Images -->
-                            <div class="absolute top-4 left-4 w-3/4 h-64 rounded-2xl overflow-hidden shadow-lg">
-                                <div class="w-full h-full bg-gradient-to-br from-indigo-400 to-indigo-600"></div>
-                            </div>
-                            <div class="absolute top-8 right-4 w-2/3 h-56 rounded-2xl overflow-hidden shadow-lg rotate-3">
-                                <div class="w-full h-full bg-gradient-to-br from-indigo-300 to-indigo-500"></div>
-                            </div>
-                            <div class="absolute bottom-4 left-8 w-3/5 h-48 rounded-2xl overflow-hidden shadow-lg -rotate-3">
-                                <div class="w-full h-full bg-gradient-to-br from-indigo-200 to-indigo-400"></div>
-                            </div>
-                        </div>
+            <!-- Products Grid -->
+            @if ($products->count())
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
+                    @foreach ($products as $product)
+                        <x-product-card :product="$product" />
+                    @endforeach
+                </div>
 
-                        <!-- Tag -->
-                        <div class="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                            <span class="inline-flex items-center rounded-full bg-white px-4 py-1.5 text-xs font-semibold text-indigo-700 shadow-lg">
-                                ♻️ Preloved Berkualitas
-                            </span>
-                        </div>
-
-                        <!-- Price Tag -->
-                        <div class="absolute -bottom-4 right-6">
-                            <div class="rounded-2xl bg-white px-4 py-2 shadow-xl">
-                                <span class="text-xs text-gray-500">Mulai dari</span>
-                                <div class="text-lg font-bold text-indigo-700">Rp 49K</div>
-                            </div>
+                @if($products->hasPages())
+                    <div class="mt-12 flex justify-center">
+                        <div class="flex items-center space-x-2">
+                            <button class="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50">
+                                Sebelumnya
+                            </button>
+                            <button class="px-4 py-2 text-sm font-medium text-white bg-indigo-600 border border-indigo-600 rounded-lg">
+                                1
+                            </button>
+                            <button class="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50">
+                                2
+                            </button>
+                            <button class="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50">
+                                3
+                            </button>
+                            <button class="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50">
+                                Selanjutnya
+                            </button>
                         </div>
                     </div>
+                @endif
+            @else
+                <div class="py-16 text-center bg-white rounded-xl border border-gray-200">
+                    <div class="max-w-md mx-auto">
+                        <div class="h-20 w-20 rounded-full bg-gray-100 flex items-center justify-center mx-auto mb-6">
+                            <svg class="w-10 h-10 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Belum ada produk yang cocok</h3>
+                        <p class="text-gray-600 mb-6">
+                            Coba ubah filter pencarian atau kembali nanti
+                        </p>
+                        <button class="px-6 py-2.5 bg-white border border-gray-300 rounded-lg text-sm font-medium text-gray-700 hover:bg-gray-50 transition">
+                            Reset Filter
+                        </button>
+                    </div>
+                </div>
+            @endif
+
+            <!-- Quick Categories -->
+            <div class="mt-12">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Jelajahi Kategori</h3>
+                <div class="flex flex-wrap gap-2">
+                    <a href="#" class="px-4 py-2 bg-white border border-gray-300 rounded-full text-sm text-gray-700 hover:bg-gray-50 hover:border-gray-400 transition">
+                        Semua
+                    </a>
+                    <a href="#" class="px-4 py-2 bg-white border border-gray-300 rounded-full text-sm text-gray-700 hover:bg-gray-50 hover:border-gray-400 transition">
+                        Pakaian
+                    </a>
+                    <a href="#" class="px-4 py-2 bg-white border border-gray-300 rounded-full text-sm text-gray-700 hover:bg-gray-50 hover:border-gray-400 transition">
+                        Sepatu
+                    </a>
+                    <a href="#" class="px-4 py-2 bg-white border border-gray-300 rounded-full text-sm text-gray-700 hover:bg-gray-50 hover:border-gray-400 transition">
+                        Tas
+                    </a>
+                    <a href="#" class="px-4 py-2 bg-white border border-gray-300 rounded-full text-sm text-gray-700 hover:bg-gray-50 hover:border-gray-400 transition">
+                        Aksesoris
+                    </a>
+                    <a href="#" class="px-4 py-2 bg-white border border-gray-300 rounded-full text-sm text-gray-700 hover:bg-gray-50 hover:border-gray-400 transition">
+                        Kaos
+                    </a>    
+                    <a href="#" class="px-4 py-2 bg-white border border-gray-300 rounded-full text-sm text-gray-700 hover:bg-gray-50 hover:border-gray-400 transition">
+                        Jeans
+                    </a>
+                    <a href="#" class="px-4 py-2 bg-white border border-gray-300 rounded-full text-sm text-gray-700 hover:bg-gray-50 hover:border-gray-400 transition">
+                        Jaket
+                    </a>
                 </div>
             </div>
         </div>
@@ -115,7 +246,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
                 <h2 class="text-3xl font-bold text-gray-900">
-                    Kenapa Memilih PakaiLagi?
+                    Kenapa Memilih ThriftHub?
                 </h2>
                 <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
                     Solusi lengkap untuk fashion berkelanjutan yang menguntungkan semua pihak
@@ -161,92 +292,6 @@
             </div>
         </div>
     </section>
-
-    <!-- PRODUCTS -->
-    <section id="products" class="bg-gradient-to-b from-gray-50 to-white py-16 lg:py-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-900">
-                    Produk Terbaru
-                </h2>
-                <p class="mt-4 text-lg text-gray-600">
-                    Temuan menarik dari seller PakaiLagi
-                </p>
-            </div>
-
-            @if ($products->count())
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
-                    @foreach ($products as $product)
-                        <x-product-card :product="$product" />
-                    @endforeach
-                </div>
-
-                @if($products->hasPages())
-                    <div class="mt-16 flex justify-center">
-                        {{ $products->links() }}
-                    </div>
-                @endif
-
-                <div class="mt-12 text-center">
-                    <a href="#" 
-                       class="inline-flex items-center text-indigo-600 hover:text-indigo-700 font-semibold">
-                        Lihat Semua Produk
-                        <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
-                        </svg>
-                    </a>
-                </div>
-            @else
-                <div class="py-20 text-center">
-                    <div class="max-w-md mx-auto">
-                        <div class="h-32 w-32 rounded-full bg-indigo-100 flex items-center justify-center mx-auto mb-6">
-                            <svg class="w-16 h-16 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                            </svg>
-                        </div>
-                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Belum ada produk tersedia</h3>
-                        <p class="text-gray-600">
-                            Nantikan produk menarik dari seller kami!
-                        </p>
-                    </div>
-                </div>
-            @endif
-        </div>
-    </section>
-
-    <!-- CATEGORIES -->
-    @if($categories->count() ?? false)
-    <section class="bg-white py-16 lg:py-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-900">
-                    Jelajahi Kategori
-                </h2>
-                <p class="mt-4 text-lg text-gray-600">
-                    Temukan berdasarkan jenis dan gaya
-                </p>
-            </div>
-
-            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
-                @foreach($categories as $category)
-                    <a href="#" 
-                       class="group p-6 rounded-2xl bg-gray-50 hover:bg-indigo-50 hover:shadow-lg border border-gray-200 hover:border-indigo-200 transition-all duration-200 text-center">
-                        <div class="h-12 w-12 rounded-lg bg-white border border-gray-200 group-hover:border-indigo-200 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
-                            @if($category->icon)
-                                <span class="text-2xl">{{ $category->icon }}</span>
-                            @else
-                                <svg class="w-6 h-6 text-gray-400 group-hover:text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
-                                </svg>
-                            @endif
-                        </div>
-                        <span class="font-medium text-gray-700 group-hover:text-indigo-700">{{ $category->name }}</span>
-                    </a>
-                @endforeach
-            </div>
-        </div>
-    </section>
-    @endif
 
     <!-- SELLER CTA -->
     <section class="relative bg-gradient-to-r from-indigo-600 to-indigo-800 text-white overflow-hidden">
@@ -333,5 +378,7 @@
             </div>
         </div>
     </section>
+
+    
 
 </x-app-layout>
