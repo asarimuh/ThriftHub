@@ -1,15 +1,7 @@
 @props(['product'])
 
-<a href="#" class="group block">
+<a href="{{ route('products.show', $product) }}" class="group block">
     <div class="relative rounded-lg bg-white border border-gray-200 overflow-hidden hover:shadow-lg hover:border-indigo-200 transition-all duration-300">
-        <!-- Sale Badge -->
-        @if(rand(0, 1))
-            <div class="absolute top-3 left-3 z-10">
-                <span class="inline-flex items-center rounded-full bg-red-500 px-2.5 py-1 text-xs font-semibold text-white">
-                    SALE
-                </span>
-            </div>
-        @endif
 
         <!-- Wishlist Button -->
         <button type="button" 
@@ -24,7 +16,7 @@
         <div class="aspect-square bg-gradient-to-br from-gray-50 to-gray-100 overflow-hidden">
             {{-- @if (isset($product->image) && $product->image) --}}
                 <img
-                    src="{{ asset('products/placeholder.jpg')}}"
+                    src="{{ asset('/storage/products/placeholder.jpg')}}"
                     alt="{{ $product->name ?? 'Product Image' }}"
                     class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                     loading="lazy"
@@ -44,13 +36,13 @@
             <!-- Category -->
             <div class="mb-2">
                 <span class="inline-block rounded-full bg-indigo-50 px-2.5 py-1 text-xs font-medium text-indigo-700">
-                    {{ $product->category ?? 'Fashion' }}
+                    {{ $product->category->name ?? 'Fashion' }}
                 </span>
             </div>
 
             <!-- Title -->
             <h3 class="text-sm font-semibold text-gray-900 line-clamp-2 min-h-[3rem] mb-2 group-hover:text-indigo-700 transition-colors">
-                {{ $product->name ?? 'Product Name' }}
+                {{ $product->title ?? 'Product Name' }}
             </h3>
 
             <!-- Price -->
@@ -59,11 +51,6 @@
                     <p class="text-base font-bold text-indigo-600">
                         Rp {{ isset($product->price) ? number_format($product->price, 0, ',', '.') : '99.000' }}
                     </p>
-                    @if(rand(0, 1))
-                        <p class="text-xs text-gray-500 line-through">
-                            Rp {{ number_format(($product->price ?? 99000) * 1.5, 0, ',', '.') }}
-                        </p>
-                    @endif
                 </div>
 
                 <!-- Condition -->
@@ -74,7 +61,7 @@
                         $colors = ['bg-green-500', 'bg-emerald-400', 'bg-blue-400', 'bg-yellow-400'];
                     @endphp
                     <span class="h-2 w-2 rounded-full {{ $colors[array_rand($colors)] }}"></span>
-                    {{ $condition }}
+                    {{ $product->condition }}
                 </span>
             </div>
 
@@ -88,7 +75,7 @@
                             </span>
                         </div>
                         <span class="text-xs text-gray-600 truncate max-w-[100px]">
-                            {{ $product->seller ?? 'Seller Name' }}
+                            {{ $product->seller->name ?? 'Seller Name' }}
                         </span>
                     </div>
                     

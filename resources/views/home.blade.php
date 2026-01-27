@@ -1,5 +1,4 @@
 <x-app-layout>
-
      <!-- COMPACT HERO -->
     <section class="relative bg-gradient-to-br from-indigo-600 via-indigo-700 to-indigo-900 text-white overflow-hidden">
         <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -38,7 +37,7 @@
                                 </form>
                             @endif
                         @else
-                            <a href="#"
+                            <a href="{{ route('register') }}"
                             class="inline-flex items-center justify-center rounded-full border border-white/40 px-6 py-3 text-sm font-medium hover:bg-white/10 hover:border-white/60 transition-all duration-200 backdrop-blur-sm">
                                 Daftar Gratis
                             </a>
@@ -167,7 +166,7 @@
                         <x-product-card :product="$product" />
                     @endforeach
                 </div>
-
+    
                 @if($products->hasPages())
                     <div class="mt-12 flex justify-center">
                         <div class="flex items-center space-x-2">
@@ -378,7 +377,4 @@
             </div>
         </div>
     </section>
-
-    
-
 </x-app-layout>
