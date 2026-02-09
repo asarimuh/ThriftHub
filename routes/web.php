@@ -8,11 +8,11 @@ use App\Http\Controllers\ProductController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
-Route::get('/products', [ProductController::class, 'index'])->name('products.index');
 
 Route::middleware('auth')->group(function () {
     Route::post('/become-seller', BecomeSellerController::class)->name('seller.upgrade');
-
+    
+    Route::get('/products', [ProductController::class, 'index'])->name('products.index');
     Route::get('/products/{product:slug}', [ProductController::class, 'show'])
     ->name('products.show');
 

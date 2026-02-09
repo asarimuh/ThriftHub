@@ -207,36 +207,12 @@
                 </div>
             @endif
 
-            <!-- Quick Categories -->
-            <div class="mt-12">
-                <h3 class="text-lg font-semibold text-gray-900 mb-4">Jelajahi Kategori</h3>
-                <div class="flex flex-wrap gap-2">
-                    <a href="#" class="px-4 py-2 bg-white border border-gray-300 rounded-full text-sm text-gray-700 hover:bg-gray-50 hover:border-gray-400 transition">
-                        Semua
-                    </a>
-                    <a href="#" class="px-4 py-2 bg-white border border-gray-300 rounded-full text-sm text-gray-700 hover:bg-gray-50 hover:border-gray-400 transition">
-                        Pakaian
-                    </a>
-                    <a href="#" class="px-4 py-2 bg-white border border-gray-300 rounded-full text-sm text-gray-700 hover:bg-gray-50 hover:border-gray-400 transition">
-                        Sepatu
-                    </a>
-                    <a href="#" class="px-4 py-2 bg-white border border-gray-300 rounded-full text-sm text-gray-700 hover:bg-gray-50 hover:border-gray-400 transition">
-                        Tas
-                    </a>
-                    <a href="#" class="px-4 py-2 bg-white border border-gray-300 rounded-full text-sm text-gray-700 hover:bg-gray-50 hover:border-gray-400 transition">
-                        Aksesoris
-                    </a>
-                    <a href="#" class="px-4 py-2 bg-white border border-gray-300 rounded-full text-sm text-gray-700 hover:bg-gray-50 hover:border-gray-400 transition">
-                        Kaos
-                    </a>    
-                    <a href="#" class="px-4 py-2 bg-white border border-gray-300 rounded-full text-sm text-gray-700 hover:bg-gray-50 hover:border-gray-400 transition">
-                        Jeans
-                    </a>
-                    <a href="#" class="px-4 py-2 bg-white border border-gray-300 rounded-full text-sm text-gray-700 hover:bg-gray-50 hover:border-gray-400 transition">
-                        Jaket
-                    </a>
-                </div>
-            </div>
+            <a href="{{ route('products.index')}}">
+                <button class="mt-5 px-4 py-4 bg-indigo-600 shadow-md text-white rounded-md">
+                    Lihat Selengkapnya
+                </button>
+            </a>
+            
         </div>
     </section>
 

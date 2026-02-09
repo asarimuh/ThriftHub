@@ -16,7 +16,7 @@
 
                 <!-- Main Nav -->
                 <div class="hidden sm:flex items-center gap-6 text-sm">
-                    <a href="{{ route('home') }}"
+                    <a href="{{ route('products.index') }}"
                        class="text-gray-700 hover:text-indigo-600">
                         Jelajahi
                     </a>

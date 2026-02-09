@@ -8,31 +8,39 @@
             </div>
 
             {{-- Product info --}}
-            <div class="space-y-6">
-
-                {{-- Category --}}
-                <span
-                    class="inline-block rounded-full bg-indigo-50 px-3 py-1
-                           text-xs font-medium text-indigo-700"
-                >
-                    {{ $product->category?->name ?? 'Uncategorized' }}
-                </span>
+            <div class="product-info">
 
                 {{-- Product name --}}
                 <h1 class="text-3xl font-semibold text-gray-900 leading-tight">
-                    {{ $product->name }}
+                    {{ $product->title }}
                 </h1>
 
                 {{-- Price --}}
-                <p class="text-2xl font-bold text-indigo-600">
+                <p class="text-2xl font-bold text-indigo-600 mt-4">
                     Rp {{ number_format($product->price) }}
                 </p>
 
+                <h1 class="text-xl font-normal text-gray-700 leading-tight mt-4">
+                    <?php 
+                    $productConditionFormatted = str_replace('_', " ", $product->condition);    
+
+                    echo "Condition : " . $productConditionFormatted;
+                    ?>
+                </h1>
+
+                <h1 class="text-xl font-normal text-gray-700 leading-tight mt-2">
+                    Size : {{ $product->size }}
+                </h1>
+
+                <h1 class="text-xl font-normal text-gray-700 leading-tight mt-2">
+                    Stock : {{ $product->stock }}
+                </h1>
+
                 {{-- Divider --}}
-                <hr class="border-gray-200">
+                <hr class="border-gray-300 mt-4">
 
                 {{-- Description --}}
-                <div class="prose prose-gray max-w-none">
+                <div class="prose prose-gray max-w-none mt-2">
                     {{ $product->description }}
                 </div>
 
@@ -43,8 +51,7 @@
                                text-white text-sm font-semibold
                                hover:bg-indigo-700
                                focus:outline-none focus:ring-2 focus:ring-indigo-500
-                               transition"
-                    >
+                               transition">
                         Add to Cart
                     </button>
                 </div>
