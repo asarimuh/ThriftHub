@@ -36,19 +36,19 @@
             active: 0,
             cards: [
                 {
-                    image: '/storage/products/placeholder.jpg',
+                    image: '/storage/products/placeholder-2-white-bg.png',
                     name: 'Uniqlo Oversized Tee',
                     condition: 'Like New',
                     price: 'Rp 75.000',
                 },
                 {
-                    image: '/storage/products/placeholder-2.jpg',
+                    image: '/storage/products/placeholder.jpg',
                     name: 'Nike Windbreaker',
                     condition: 'Preloved',
                     price: 'Rp 180.000',
                 },
                 {
-                    image: '/storage/products/placeholder-3.jpg',
+                    image: '/storage/products/placeholder-2-white-bg.png',
                     name: 'Levi’s 501 Jeans',
                     condition: 'Good Condition',
                     price: 'Rp 220.000',

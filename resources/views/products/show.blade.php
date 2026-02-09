@@ -16,7 +16,7 @@
                 </h1>
 
                 {{-- Price --}}
-                <p class="text-2xl font-bold text-indigo-600 mt-4">
+                <p class="text-2xl font-bold text-gray-700 mt-4">
                     Rp {{ number_format($product->price) }}
                 </p>
 

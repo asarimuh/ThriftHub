@@ -21,6 +21,17 @@
                         Jelajahi
                     </a>
 
+                    <select class="nav-collection-dropddown text-gray-700 text-sm" name="collection">
+                        <option value="" selected disabled hidden>
+                            Collection
+                        </option>
+                    
+                        <option value="test1">Test</option>
+                        <option value="test2">Test</option>
+                        <option value="test3">Test</option>
+                    </select>
+
+
                     @auth
                         @if(auth()->user()->isSeller())
                             <a href="{{ route('seller.products.index') }}"
@@ -34,6 +45,11 @@
 
             <!-- Right: Actions -->
             <div class="flex items-center gap-4">
+                <a href="{{ route('products.create')}}">
+                    <button class="px-3 py-3 bg-gray-900 shadow-md text-white rounded-md text-sm">
+                        Jual Produk
+                    </button>
+                </a>
                 @auth
                     {{-- Buyer CTA --}}
                     @if(auth()->user()->isBuyer())

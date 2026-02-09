@@ -13,8 +13,9 @@ Route::middleware('auth')->group(function () {
     Route::post('/become-seller', BecomeSellerController::class)->name('seller.upgrade');
     
     Route::get('/products', [ProductController::class, 'index'])->name('products.index');
-    Route::get('/products/{product:slug}', [ProductController::class, 'show'])
-    ->name('products.show');
+    Route::get('/products/sell', [ProductController::class, 'create'])->name('products.create');
+    Route::post('/products/sell', [ProductController::class, 'store'])->name('products.store');
+    Route::get('/products/{product:slug}', [ProductController::class, 'show'])->name('products.show');
 
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');

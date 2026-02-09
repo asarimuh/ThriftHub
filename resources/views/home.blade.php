@@ -1,6 +1,6 @@
 <x-app-layout>
-     <!-- COMPACT HERO -->
-    <section class="relative bg-gradient-to-br from-indigo-600 via-indigo-700 to-indigo-900 text-white overflow-hidden">
+    <!-- COMPACT HERO -->
+    <section class="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-950 text-white overflow-hidden">
         <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
             <div class="grid grid-cols-1 lg:grid-cols-3 items-center gap-8">
 
@@ -13,16 +13,16 @@
                 <div class="text-center max-w-3xl mx-auto">
                     <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight tracking-tight">
                         Baju lama,
-                        <span class="block text-indigo-200 mt-1">cerita baru.</span>
+                        <span class="block text-gray-300 mt-1">cerita baru.</span>
                     </h1>
 
-                    <p class="mt-4 text-indigo-100 max-w-xl mx-auto">
+                    <p class="mt-4 text-gray-200 max-w-xl mx-auto">
                         Marketplace preloved fashion berkualitas dengan harga terjangkau.
                     </p>
 
                     <div class="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
                         <a href="#products"
-                        class="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-semibold text-indigo-700 hover:bg-indigo-50 hover:scale-105 active:scale-95 transition-all duration-200 shadow-lg">
+                        class="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-semibold text-gray-900 hover:bg-gray-100 hover:scale-105 active:scale-95 transition-all duration-200 shadow-lg">
                             Jelajahi Produk
                         </a>
 
@@ -75,7 +75,7 @@
                             <input 
                                 type="text" 
                                 placeholder="Cari produk, brand, atau kata kunci..."
-                                class="w-full lg:w-80 pl-10 pr-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 focus:outline-none transition"
+                                class="w-full lg:w-80 pl-10 pr-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-800 focus:border-gray-800 focus:outline-none transition"
                             >
                             <div class="absolute left-3 top-1/2 transform -translate-y-1/2">
                                 <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -90,7 +90,7 @@
                 <div class="mt-6 flex flex-wrap items-center gap-3">
                     <!-- Sort Dropdown -->
                     <div class="relative">
-                        <select class="appearance-none bg-white border border-gray-300 rounded-lg px-4 py-2.5 pr-10 text-sm focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 focus:outline-none cursor-pointer">
+                        <select class="appearance-none bg-white border border-gray-300 rounded-lg px-4 py-2.5 pr-10 text-sm focus:ring-2 focus:ring-gray-800 focus:border-gray-800 focus:outline-none cursor-pointer">
                             <option>Urutkan: Terbaru</option>
                             <option>Harga: Rendah ke Tinggi</option>
                             <option>Harga: Tinggi ke Rendah</option>
@@ -106,7 +106,7 @@
 
                     <!-- Category Filter -->
                     <div class="relative">
-                        <select class="appearance-none bg-white border border-gray-300 rounded-lg px-4 py-2.5 pr-10 text-sm focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 focus:outline-none cursor-pointer">
+                        <select class="appearance-none bg-white border border-gray-300 rounded-lg px-4 py-2.5 pr-10 text-sm focus:ring-2 focus:ring-gray-800 focus:border-gray-800 focus:outline-none cursor-pointer">
                             <option>Semua Kategori</option>
                             <option>Pakaian</option>
                             <option>Sepatu</option>
@@ -118,7 +118,7 @@
 
                     <!-- Condition Filter -->
                     <div class="relative">
-                        <select class="appearance-none bg-white border border-gray-300 rounded-lg px-4 py-2.5 pr-10 text-sm focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 focus:outline-none cursor-pointer">
+                        <select class="appearance-none bg-white border border-gray-300 rounded-lg px-4 py-2.5 pr-10 text-sm focus:ring-2 focus:ring-gray-800 focus:border-gray-800 focus:outline-none cursor-pointer">
                             <option>Semua Kondisi</option>
                             <option>Baru</option>
                             <option>Seperti Baru</option>
@@ -129,7 +129,7 @@
 
                     <!-- Price Range -->
                     <div class="relative">
-                        <select class="appearance-none bg-white border border-gray-300 rounded-lg px-4 py-2.5 pr-10 text-sm focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 focus:outline-none cursor-pointer">
+                        <select class="appearance-none bg-white border border-gray-300 rounded-lg px-4 py-2.5 pr-10 text-sm focus:ring-2 focus:ring-gray-800 focus:border-gray-800 focus:outline-none cursor-pointer">
                             <option>Semua Harga</option>
                             <option>Di bawah Rp 100.000</option>
                             <option>Rp 100.000 - Rp 300.000</option>
@@ -173,7 +173,7 @@
                             <button class="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50">
                                 Sebelumnya
                             </button>
-                            <button class="px-4 py-2 text-sm font-medium text-white bg-indigo-600 border border-indigo-600 rounded-lg">
+                            <button class="px-4 py-2 text-sm font-medium text-white bg-gray-900 border border-gray-900 rounded-lg">
                                 1
                             </button>
                             <button class="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50">
@@ -208,7 +208,7 @@
             @endif
 
             <a href="{{ route('products.index')}}">
-                <button class="mt-5 px-4 py-4 bg-indigo-600 shadow-md text-white rounded-md">
+                <button class="mt-5 px-4 py-4 bg-gray-900 shadow-md text-white rounded-md">
                     Lihat Selengkapnya
                 </button>
             </a>
@@ -229,8 +229,8 @@
             </div>
 
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
-                <div class="group p-8 rounded-3xl bg-gradient-to-br from-indigo-50 to-white border border-indigo-100 hover:border-indigo-200 hover:shadow-xl transition-all duration-300">
-                    <div class="h-16 w-16 rounded-2xl bg-gradient-to-br from-indigo-500 to-indigo-600 text-white flex items-center justify-center text-2xl shadow-lg mb-6 group-hover:scale-110 transition-transform">
+                <div class="group p-8 rounded-3xl bg-gradient-to-br from-gray-50 to-white border border-gray-200 hover:border-gray-300 hover:shadow-xl transition-all duration-300">
+                    <div class="h-16 w-16 rounded-2xl bg-gradient-to-br from-gray-800 to-gray-900 text-white flex items-center justify-center text-2xl shadow-lg mb-6 group-hover:scale-110 transition-transform">
                         <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
                         </svg>
@@ -241,8 +241,8 @@
                     </p>
                 </div>
 
-                <div class="group p-8 rounded-3xl bg-gradient-to-br from-indigo-50 to-white border border-indigo-100 hover:border-indigo-200 hover:shadow-xl transition-all duration-300">
-                    <div class="h-16 w-16 rounded-2xl bg-gradient-to-br from-indigo-500 to-indigo-600 text-white flex items-center justify-center text-2xl shadow-lg mb-6 group-hover:scale-110 transition-transform">
+                <div class="group p-8 rounded-3xl bg-gradient-to-br from-gray-50 to-white border border-gray-200 hover:border-gray-300 hover:shadow-xl transition-all duration-300">
+                    <div class="h-16 w-16 rounded-2xl bg-gradient-to-br from-gray-800 to-gray-900 text-white flex items-center justify-center text-2xl shadow-lg mb-6 group-hover:scale-110 transition-transform">
                         <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
                         </svg>
@@ -253,8 +253,8 @@
                     </p>
                 </div>
 
-                <div class="group p-8 rounded-3xl bg-gradient-to-br from-indigo-50 to-white border border-indigo-100 hover:border-indigo-200 hover:shadow-xl transition-all duration-300">
-                    <div class="h-16 w-16 rounded-2xl bg-gradient-to-br from-indigo-500 to-indigo-600 text-white flex items-center justify-center text-2xl shadow-lg mb-6 group-hover:scale-110 transition-transform">
+                <div class="group p-8 rounded-3xl bg-gradient-to-br from-gray-50 to-white border border-gray-200 hover:border-gray-300 hover:shadow-xl transition-all duration-300">
+                    <div class="h-16 w-16 rounded-2xl bg-gradient-to-br from-gray-800 to-gray-900 text-white flex items-center justify-center text-2xl shadow-lg mb-6 group-hover:scale-110 transition-transform">
                         <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
                         </svg>
@@ -269,11 +269,11 @@
     </section>
 
     <!-- SELLER CTA -->
-    <section class="relative bg-gradient-to-r from-indigo-600 to-indigo-800 text-white overflow-hidden">
+    <section class="relative bg-gradient-to-r from-gray-900 to-gray-950 text-white overflow-hidden">
         <!-- Background Pattern -->
         <div class="absolute inset-0 opacity-10">
             <div class="absolute top-0 left-0 w-64 h-64 rounded-full bg-white blur-3xl"></div>
-            <div class="absolute bottom-0 right-0 w-80 h-80 rounded-full bg-indigo-300 blur-3xl"></div>
+            <div class="absolute bottom-0 right-0 w-80 h-80 rounded-full bg-gray-600 blur-3xl"></div>
         </div>
 
         <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
@@ -281,7 +281,7 @@
                 <h2 class="text-3xl sm:text-4xl font-bold mb-6">
                     Punya baju yang jarang dipakai?
                 </h2>
-                <p class="text-xl text-indigo-200 mb-10">
+                <p class="text-xl text-gray-300 mb-10">
                     Jual sekarang dan beri cerita baru untuk fashionmu. Mulai dari Rp 0 biaya pendaftaran.
                 </p>
 
@@ -291,7 +291,7 @@
                             <form method="POST" action="{{ route('seller.upgrade') }}" class="inline-flex">
                                 @csrf
                                 <button type="submit"
-                                    class="inline-flex items-center justify-center rounded-full bg-white px-8 py-4 text-lg font-semibold text-indigo-700 hover:bg-indigo-50 hover:scale-105 active:scale-95 transition-all duration-200 shadow-lg">
+                                    class="inline-flex items-center justify-center rounded-full bg-white px-8 py-4 text-lg font-semibold text-gray-900 hover:bg-gray-100 hover:scale-105 active:scale-95 transition-all duration-200 shadow-lg">
                                     Mulai Jual Sekarang
                                     <svg class="ml-2 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
@@ -301,7 +301,7 @@
                         @endif
                     @else
                         <a href="{{ route('register') }}"
-                           class="inline-flex items-center justify-center rounded-full bg-white px-8 py-4 text-lg font-semibold text-indigo-700 hover:bg-indigo-50 hover:scale-105 active:scale-95 transition-all duration-200 shadow-lg">
+                           class="inline-flex items-center justify-center rounded-full bg-white px-8 py-4 text-lg font-semibold text-gray-900 hover:bg-gray-100 hover:scale-105 active:scale-95 transition-all duration-200 shadow-lg">
                             Daftar Gratis
                             <svg class="ml-2 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"/>

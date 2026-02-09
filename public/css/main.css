@@ -1,0 +1,14 @@
+.nav-collection-dropddown {
+    border: none;
+    border-radius: 8px;
+}
+
+.nav-collection-dropddown:active {
+    border: 1px solid black;
+    border-radius: 8px;
+}
+
+.nav-collection-dropddown:focus {
+    border: 1px solid black;
+    border-radius: 8px;
+}

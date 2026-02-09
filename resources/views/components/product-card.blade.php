@@ -16,7 +16,7 @@
         <div class="aspect-square bg-gradient-to-br from-gray-50 to-gray-100 overflow-hidden">
             {{-- @if (isset($product->image) && $product->image) --}}
                 <img
-                    src="{{ asset('/storage/products/placeholder.jpg')}}"
+                    src="{{ asset('/images/clothes.png')}}"
                     alt="{{ $product->name ?? 'Product Image' }}"
                     class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                     loading="lazy"
